@@ -1,0 +1,120 @@
+/* resets */
+*{
+  padding: 0;
+  margin: 0;
+  color: #DBDBDB;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html, body{
+ height: 100vh;
+}
+
+/* root of the aplication */
+.main{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* sidebar */
+.sidebar{
+  display: flex;
+  padding-top: 1.5rem;
+  flex-basis: 1.5rem;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: #51474B;
+  transition: flex-grow 100ms;
+}
+
+.sidebar-item{
+  width: 80%;
+  display: "flex";
+  flex-direction: row;
+  text-align:center;
+} 
+
+.open{
+  flex-grow:4;
+}
+
+.icon-text{
+  transition: opacity 5ms ease-in-out;
+}
+
+/* the container of the right side
+ of the aplication */
+.container{
+  display: flex;
+  flex-grow: 24;
+  flex-direction: column;
+  height: 100%;
+  
+  background-color: red;
+}
+
+/* navbar */
+.navbar{
+  padding: 0 1rem;
+  flex-grow: 1;
+  display: flex;
+  font-size: 8px;
+  justify-content: start;
+  align-items: center;
+  background-color: #161314;
+}
+
+
+/* dynamic content */
+.content{
+  flex-grow: 19;
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  background-color: black;
+}
+
+/* nice animation */
+
+
+
+/* media queries */
+@media (max-width: 480){
+  .icon-text{
+    font-size: 0.1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  body{
+    font-size: 10px
+  }
+  .icon-text{
+    font-size: 0.75rem
+  }
+  .container{
+    flex-grow: 20;
+  }
+}
+
+
+@media (max-width: 900px) {
+  body{
+    font-size: 8px
+  }
+  .icon-text{
+    font-size: 1rem
+  }
+  .container{
+    flex-grow: 20;
+  }
+  .content{
+    font-size: 14px
+  }
+}
+
